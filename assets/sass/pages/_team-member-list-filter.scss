@@ -1,0 +1,117 @@
+.member-list-wrapper{
+    #memberListTable{
+        border: .1rem solid var(--slate-50);
+        border-radius: 1.6rem;
+        thead{
+            tr{
+                border-style: none;
+                border: 0;
+                th{
+                    padding: 1.6rem 2.4rem;
+                    font-size: 1.4rem;
+                    color: var(--slate-500);
+                    font-weight: 500;
+                    cursor: default;
+                    background: var(--slate-50);
+                    &:first-child{
+                        border-radius: 1.6rem 0 0 0;
+                    }
+                    &:last-child{
+                        border-radius: 0 1.6rem 0 0;
+                        text-align: right;
+                    }
+                    .dt-column-order{
+                        display: none;
+                    }
+                    &:hover{
+                        border: 0;
+                        outline: 0;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+        tbody{
+            tr{
+                td{
+                    &.child{
+                        table{
+                            tr{
+                                td{
+                                    text-align: left;
+                                    border-radius: 0;
+                                    button{
+                                        background: transparent;
+                                        border: 0;
+                                        color: var(--slate-950);
+                                        outline: none;
+                                        box-shadow: none;
+                                        font-size: 1.6rem;
+                                        font-weight: 600;
+                                    }
+                                    .dropdown-menu{
+                                        min-width: 15rem;
+                                        max-width: 15rem;
+                                        background: var(--white-950);
+                                        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+                                        border-radius: 0.6rem;
+                                        border: 0.1rem solid var(--slate-50);
+                                        border: 0;
+                                        overflow: hidden;
+                                        li{
+                                            a{
+                                                padding: .8rem 1rem;
+                                                display: flex;
+                                                align-items: center;
+                                                gap: .5rem;
+                                            }
+                                        }
+                                    }
+                                    &:first-child{
+                                        border-radius: 0;
+                                    }
+                                    &:last-child{
+                                        border-radius: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        tr{
+            td{
+                border-radius: 0;
+                padding: 1.6rem 2rem;
+                &:last-child{
+                    text-align: end;
+                }
+            }
+            &:last-child{
+                td{
+                    &:first-child{
+                        border-radius: 0 0 0 1.6rem;
+                    }
+                    &:last-child{
+                        border-radius: 0 0 1.6rem 0;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+        .social-icon{
+            justify-content: start;
+        }
+        .team_name {
+            padding: 0;
+        }
+    }
+    table{
+        &.table>:not(caption)>*>*{
+            background-color: var(--white-950);
+            border-bottom: 0;
+            box-shadow: none;
+        }   
+    }
+}

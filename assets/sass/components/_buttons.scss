@@ -1,0 +1,206 @@
+.btn__primary {
+    background-color: var(--primary-600);
+    border: .1rem solid var(--primary-600);
+    color: var(--white-950);
+    padding: 1.2rem 2rem;
+    border-radius: .8rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    outline: 0;
+    @include inline-flex-center;
+    gap: .8rem;
+    transition: all .15s ease;
+    white-space: nowrap;
+    &:hover {
+        background-color: var(--primary-700);
+        color: var(--white-950);
+    }
+}
+.btn__secondary {
+    border: .1rem solid var(--slate-800);
+    color: var(--black-950);
+    padding: 1.2rem 2rem;
+    border-radius: .8rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    @include inline-flex-center;
+    gap: .8rem;
+    transition: all .15s ease;
+    background-color: var(--white-950);
+    white-space: nowrap;
+}
+.notification-bell-icon {
+    @include dimension(4rem, 4rem);
+    @include flex-center;
+    border: 0;
+    background-color: transparent;
+    position: relative;
+    color: var(--slate-500);
+    .count {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: var(--error-500);
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--white-950);
+        border-radius: 1rem;
+        padding: .1rem .5rem;
+        text-align: center;
+    }
+}
+
+.btn__primary__lightpill{
+    font-size: 1.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-600);
+    font-weight: 600;
+    gap: .4rem;
+    padding: .6rem 1.5rem;
+    background: var(--primary-50);
+    border-radius: 5rem;
+    transition: all .3s ease;
+    &:hover{
+        color: var(--primary-600);
+        background: var(--primary-100);
+    }
+}
+.btn__danger__lightpill{
+    font-size: 1.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--error-600);
+    font-weight: 600;
+    gap: .4rem;
+    padding: .6rem 1.5rem;
+    background: var(--error-100);
+    border-radius: 5rem;
+    transition: all .3s ease;
+    &:hover{
+        color: var(--error-600);
+        background: var(--error-200);
+    }
+}
+.btn__green__lightpill{
+    font-size: 1.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--success-600);
+    font-weight: 600;
+    gap: .4rem;
+    padding: .6rem 1.5rem;
+    background: var(--success-100);
+    border-radius: 5rem;
+    transition: all .3s ease;
+    &:hover{
+        color: var(--success-600);
+        background: var(--success-200);
+    }
+}
+.btn__secondary__lightpill{
+    font-size: 1.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--slate-600);
+    font-weight: 600;
+    gap: .4rem;
+    padding: .6rem 1.5rem;
+    background: var(--slate-100);
+    border-radius: 5rem;
+    transition: all .3s ease;
+    &:hover{
+        color: var(--slate-600);
+        background: var(--slate-200);
+    }
+}
+.btn__warning__lightpill{
+    font-size: 1.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--warning-600);
+    font-weight: 600;
+    gap: .4rem;
+    padding: .6rem 1.5rem;
+    background: var(--warning-100);
+    border-radius: 5rem;
+    transition: all .3s ease;
+    &:hover{
+        color: var(--warning-600);
+        background: var(--warning-200);
+    }
+}
+
+// Link text
+.text__primary {
+    color: var(--primary-600)
+}
+.text-black{
+    color: var(--slate-950);
+}
+.color_active{
+    color: #4FB059;
+}
+.update-btn{
+    font-size: 1.4rem;
+    line-height: 1.6;
+    font-weight: 600;
+    color: var(--slate-600);
+    padding: .8rem 2.4rem;
+    background: var(--slate-50);
+    border-radius: .8rem;
+    transition: all .3s ease;
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+    display: inline-flex;
+    align-items: center;
+    gap: .8rem;
+    &:hover{
+        background: var(--slate-100);
+        color: var(--slate-700);
+    }
+}
+
+
+.toggle-switch {
+    display: inline-flex;
+    input[type=checkbox] {
+        display: none;
+    }
+    label {
+        display: inline-block;
+        width: 4.8rem;
+        height: 2.6rem;
+        border-radius: 2rem;
+        border: .1rem solid var(--primary-600);
+        cursor: pointer;
+        transition: 0.3s;
+        position: relative;
+        &::after {
+            content: "";
+            top: 50%;
+            left: .2rem;
+            position: absolute;
+            transform: translateY(-50%);
+            width: 1.9rem;
+            height: 1.9rem;
+            border-radius: 2rem;
+            background: var(--primary-400);
+            transition: 0.3s;
+        }
+    }
+    input:checked ~ label {
+        border-color: var(--primary-600);
+        &::after {
+            left: 2.5rem;
+            background-color: var(--primary-600);
+
+        }
+    }
+}
